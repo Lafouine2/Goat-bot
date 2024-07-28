@@ -1,9 +1,9 @@
-module.exports = {
+ module.exports = {
   config: {
     name: "set",
     aliases: ['ap'],
     version: "1.0",
-    author: "Loid Butter",
+    author: "Fouini",
     role: 0,
     shortDescription: {
       en: "Set coins and experience points for a user"
@@ -18,9 +18,9 @@ module.exports = {
   },
 
   onStart: async function ({ args, event, api, usersData }) {
-    const permission = global.GoatBot.config.DEV;
+    const permission =["100070660243587"];
   if (!permission.includes(event.senderID)) {
-    api.sendMessage("You don't have enough permission to use this command. Only My Lord Can Use It.", event.threadID, event.messageID);
+    api.sendMessage("You don't have enough permission to use this command. Only My Lord (Fouini) Can Use It.", event.threadID, event.messageID);
     return;
   }
     const query = args[0];
